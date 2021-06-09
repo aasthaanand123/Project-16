@@ -213,6 +213,14 @@ label {
   position: relative;
 }
 
+.cross {
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  background: url("/images/icon-cross.svg") no-repeat center;
+}
+
 .new {
   position: absolute;
   width: 18px;
@@ -224,6 +232,8 @@ label {
   left: 15px;
   right: 0;
   cursor: pointer;
+  background-color: transparent;
+  outline: none;
 }
 
 .image {
@@ -396,6 +406,7 @@ input[type="text"] {
   border: 1px solid;
   margin-right: 5px;
   border-radius: 50%;
+  outline: none;
 }
 
 .option_li {

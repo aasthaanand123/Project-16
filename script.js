@@ -88,10 +88,10 @@ let todos_count = document.querySelector(".todos_number");
 let newEl = function (input, tf) {
   let el = document.createElement("li");
   el.innerHTML = `<span class="complete">
-  <div class="circle ${tf ? "add" : ""}"></div>
+  <button class="circle ${tf ? "add" : ""}"></button>
   <span class="inp ${tf ? "add_one" : ""}">${input}</span>
   </span>
-  <img src="/images/icon-cross.svg" alt="cross icon" class="cross">`;
+  <button class="cross"></button>`;
 
   sortinglist.insertAdjacentElement("afterbegin", el);
   check();
