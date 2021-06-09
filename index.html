@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body class="dark-theme">
+    <main>
+      <div class="headings">
+        <h1>Todo</h1>
+        <div class="image"></div>
+      </div>
+
+      <div class="container_list">
+        <label for="items"
+          ><div class="new"></div>
+          <input type="text" placeholder="Create a new todo..." id="items"
+        /></label>
+        <ul class="todos">
+          <ul class="first"></ul>
+          <li class="enter"><span>Enter Your todos!</span></li>
+          <li class="options_one">
+            <span><span class="todos_number">0</span> items left</span>
+            <ul class="option_li">
+              <li class="all btn">All</li>
+              <li class="active btn">Active</li>
+              <li class="completed_opt btn">Completed</li>
+            </ul>
+            <span class="clear_comp"> Clear Completed</span>
+          </li>
+        </ul>
+        <ul class="options_two">
+          <li class="all btn">All</li>
+          <li class="active btn">Active</li>
+          <li class="completed_opt btn">Completed</li>
+        </ul>
+      </div>
+      <div class="dragdrop">Drag and drop to reorder list</div>
+    </main>
+  </body>
+</html>

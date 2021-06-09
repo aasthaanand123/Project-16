@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style-type: none;
+}
+input::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+}
+//light theme
+$v-light-gray: hsl(0, 0%, 98%);
+$v-light-grayish-blue: hsl(236, 33%, 92%);
+$light-grayish-blue-light: hsl(233, 11%, 84%);
+$dark-grayish-blue: hsl(236, 9%, 61%);
+$v-dark-grayish-blue: hsl(235, 19%, 35%);
+//dark theme
+$v-dark-blue: hsl(235, 21%, 11%);
+$v-dark-desaturated-blue: hsl(235, 24%, 19%);
+$light-grayish-blue-dark: hsl(234, 39%, 85%);
+$light-grayish-blue-h: hsl(236, 33%, 92%);
+$dark-grayish-blue-dark: hsl(234, 11%, 52%);
+$v-dark-grayish-blue-dark: hsl(233, 14%, 35%);
+$v-dark-grayish-blue-dark-two: hsl(237, 14%, 26%);
+
+/*- Bright Blue: hsl(220, 98%, 61%)
+- Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)*/
+
+.dark-theme {
+  transition: background-color 500ms;
+  background-color: $v-dark-blue;
+  color: $light-grayish-blue-h;
+  &::before {
+    transition: background-image 500ms;
+    background-image: url("/images/bg-mobile-dark.jpg");
+  }
+  background-repeat: no-repeat;
+  @media (min-width: 376px) {
+    &::before {
+      transition: background-image 500ms;
+      background-image: url("/images/bg-desktop-dark.jpg");
+    }
+  }
+  input[type="text"],
+  .todos li,
+  .options_two,
+  .options_one,
+  .circle {
+    background-color: $v-dark-desaturated-blue;
+    color: $v-dark-grayish-blue-dark;
+  }
+  input[type="text"] {
+    color: $light-grayish-blue-h;
+  }
+  input[type="text"]::placeholder {
+    color: $v-dark-grayish-blue-dark;
+  }
+  .first li,
+  .enter {
+    color: $light-grayish-blue-h;
+    border-bottom: 1px solid $v-dark-grayish-blue-dark-two;
+  }
+  .dragdrop {
+    color: $v-dark-grayish-blue-dark;
+  }
+
+  .image {
+    transition: background-image 500ms;
+    background: url("/images/icon-sun.svg") no-repeat;
+  }
+  .todos,
+  .options_two {
+    box-shadow: none;
+  }
+  .new {
+    color: $v-dark-grayish-blue-dark;
+  }
+}
+.light-theme {
+  transition: background-color 500ms;
+  background-color: #f4f4f6;
+  color: $light-grayish-blue-h;
+
+  &::before {
+    transition: background-image 500ms;
+    background-image: url("/images/bg-mobile-light.jpg");
+  }
+  background-repeat: no-repeat;
+  @media (min-width: 376px) {
+    &::before {
+      transition: background-image 500ms;
+      background-image: url("/images/bg-desktop-light.jpg");
+    }
+  }
+  input[type="text"],
+  .todos li,
+  .options_two,
+  .options_one,
+  .circle {
+    background-color: $v-light-gray;
+    color: gray;
+  }
+  .new {
+    color: gray;
+  }
+  input[type="text"]::placeholder {
+    color: gray;
+  }
+  .enter,
+  .first li {
+    color: $v-dark-grayish-blue;
+    border-bottom: 1px solid $light-grayish-blue-light;
+  }
+  .dragdrop {
+    color: gray;
+  }
+  .image {
+    transition: background-image 500ms;
+    background: url("/images/icon-moon.svg") no-repeat;
+  }
+}

@@ -1,0 +1,236 @@
+@import "utilities";
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 1.7rem;
+}
+main {
+  margin-top: 50px;
+  width: 330px;
+}
+.headings {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  margin-bottom: 30px;
+}
+label {
+  position: relative;
+}
+.new {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 1px solid;
+  border-radius: 50%;
+  top: 13px;
+  bottom: 0;
+  left: 15px;
+  right: 0;
+  cursor: pointer;
+}
+.image {
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+input[type="text"] {
+  font-family: "Josefin Sans", sans-serif;
+}
+.image::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+body::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 40%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+input[type="text"],
+.options_two {
+  border-radius: 5px;
+}
+input[type="text"],
+.options_two,
+.options_one {
+  padding: 15px;
+
+  border: none;
+  outline: none;
+  width: 330px;
+}
+input[type="text"] {
+  padding: 15px 40px;
+}
+.container_list {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.todos {
+  margin-top: 25px;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(128, 128, 128, 0.253);
+}
+.enter {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.todos li {
+  padding: 15px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  &:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+.options_two {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  box-shadow: 0 5px 15px rgba(128, 128, 128, 0.253);
+
+  li {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+.options_one {
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 15px;
+}
+.dragdrop {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 50px;
+}
+.cross {
+  opacity: 0;
+  cursor: pointer;
+}
+.todos li:hover {
+  .cross {
+    opacity: 1;
+  }
+}
+//scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: $v-dark-desaturated-blue;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: white;
+}
+//circle
+.circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.option_li {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .option_li {
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    li {
+      display: block;
+      padding: 0;
+    }
+  }
+  .options_two {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  main {
+    margin-top: 100px;
+    width: 500px;
+  }
+  .todos,
+  input[type="text"],
+  .options_two,
+  .options_one,
+  .container_list {
+    width: 500px;
+    font-size: 1.1rem;
+  }
+  .options_one {
+    ul li,
+    span {
+      font-size: 0.9rem;
+    }
+  }
+  input[type="text"] {
+    font-size: 1.1rem;
+  }
+}
+.add {
+  background: url("/images/icon-check.svg"),
+    linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.inp {
+  text-decoration: line-through;
+  text-decoration-color: transparent;
+  transition: text-decoration 250ms ease-in-out;
+}
+.add_one {
+  text-decoration: line-through;
+  color: gray;
+  text-decoration-color: gray;
+}
+@media (min-width: 1350px) {
+  body::before {
+    background-size: cover;
+  }
+  main {
+    margin-top: 120px;
+  }
+}
+.new:hover,
+.circle:hover {
+  border-color: hsl(280, 87%, 65%);
+}
+.first li:hover {
+  filter: brightness(90%);
+}
